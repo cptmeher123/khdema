@@ -4,7 +4,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Text } from 'react-native';
 import { COLORS } from '../shared';
+import { useAuth } from '../context/AuthContext';
 
+import { PhoneScreen } from '../screens/auth/PhoneScreen';
+import { OTPScreen } from '../screens/auth/OTPScreen';
+import { ArtisanSetupScreen } from '../screens/auth/ArtisanSetupScreen';
 import { DashboardScreen } from '../screens/DashboardScreen';
 import { RequestDetailScreen } from '../screens/RequestDetailScreen';
 
@@ -30,11 +34,32 @@ const ArtisanTabs = () => (
   </Tab.Navigator>
 );
 
-export const AppNavigator = () => (
-  <NavigationContainer>
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="ArtisanTabs" component={ArtisanTabs} />
-      <Stack.Screen name="RequestDetail" component={RequestDetailScreen} />
-    </Stack.Navigator>
-  </NavigationContainer>
+const AuthStack = () => (
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Screen name="Phone" component={PhoneScreen} />
+    <Stack.Screen name="OTP" component={OTPScreen} />
+  </Stack.Navigator>
 );
+
+const MainStack = () => (
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Screen name="ArtisanTabs" component={ArtisanTabs} />
+    <Stack.Screen name="RequestDetail" component={RequestDetailScreen} />
+  </Stack.Navigator>
+);
+
+export const AppNavigator = () => {
+  const { artisan, isAuthenticated } = useAuth();
+
+  return (
+    <NavigationContainer>
+      {!artisan && <AuthStack />}
+      {artisan?.isNewUser && (
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="ArtisanSetup" component={ArtisanSetupScreen} />
+        </Stack.Navigator>
+      )}
+      {isAuthenticated && <MainStack />}
+    </NavigationContainer>
+  );
+};
