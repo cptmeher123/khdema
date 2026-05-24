@@ -4,10 +4,8 @@
     "slug": "khdema-client",
     "version": "0.1.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
-    "splash": { "resizeMode": "contain", "backgroundColor": "#0F0F0F" },
     "ios": { "supportsTablet": false, "bundleIdentifier": "tn.khdema.client" },
-    "android": { "adaptiveIcon": { "backgroundColor": "#0F0F0F" }, "package": "tn.khdema.client" }
+    "android": { "package": "tn.khdema.client" }
   }
 }
