@@ -1,0 +1,15 @@
+{
+  "name": "khdema",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Artisan & Home Service Booking App — Tunisia",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "client": "yarn workspace @khdema/client start",
+    "artisan": "yarn workspace @khdema/artisan start",
+    "lint": "eslint apps/ packages/ --ext .ts,.tsx"
+  }
+}
