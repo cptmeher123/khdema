@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Linking, StyleSheet } from 'react-native';
-import { COLORS } from '@khdema/shared';
+import { COLORS } from '../shared';
 
 const JOBS: Record<number, any> = {
   1: { id: 1, client: 'Sarra B.', service: 'Plomberie', zone: 'Ariana Soghra', address: 'Rue Abou Bakr Esseddik, Ariana', time: "Aujourd'hui · 14h–16h", desc: "Fuite sous l'évier de la cuisine. L'eau coule depuis 2 jours.", phone: '21622345678' },

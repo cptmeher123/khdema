@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import { COLORS, SERVICES, ARTISANS } from '@khdema/shared';
+import { COLORS, SERVICES, ARTISANS } from '../shared';
 
 export const HomeScreen = ({ navigation }: any) => {
   const available = ARTISANS.filter(a => a.available);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Linking, StyleSheet } from 'react-native';
-import { COLORS, ARTISANS } from '@khdema/shared';
+import { COLORS, ARTISANS } from '../shared';
 
 const REVIEWS = [
   { name: 'Sarra B.', text: 'Très professionnel, travail soigné. Revient très vite.', rating: 5 },

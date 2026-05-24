@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Switch, StyleSheet } from 'react-native';
-import { COLORS } from '@khdema/shared';
+import { COLORS } from '../shared';
 
 const JOBS = [
   { id: 1, client: 'Sarra B.', service: 'Plomberie', zone: 'Ariana Soghra', time: "14h–16h", desc: "Fuite sous l'évier", urgent: false },

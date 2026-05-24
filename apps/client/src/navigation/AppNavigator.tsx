@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Text } from 'react-native';
-import { COLORS } from '@khdema/shared';
+import { COLORS } from '../shared';
 
 import { HomeScreen } from '../screens/HomeScreen';
 import { ArtisanListScreen } from '../screens/ArtisanListScreen';

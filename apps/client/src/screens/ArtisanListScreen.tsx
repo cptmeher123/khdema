@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import { COLORS, ARTISANS, SERVICES } from '@khdema/shared';
+import { COLORS, ARTISANS, SERVICES } from '../shared';
 
 const FILTERS = ['Disponible', 'Mieux notés', 'Prix ↑', 'Vérifié'];
 

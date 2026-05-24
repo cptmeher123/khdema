@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
-import { COLORS, ARTISANS, TIME_SLOTS } from '@khdema/shared';
+import { COLORS, ARTISANS, TIME_SLOTS } from '../shared';
 
 const DATES = ["Aujourd'hui", 'Demain', 'Jeu 23', 'Ven 24', 'Sam 25'];
 
