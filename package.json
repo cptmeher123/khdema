@@ -8,8 +8,8 @@
     "packages/*"
   ],
   "scripts": {
-    "client": "yarn workspace @khdema/client start",
-    "artisan": "yarn workspace @khdema/artisan start",
+    "client": "npm run start --workspace=apps/client",
+    "artisan": "npm run start --workspace=apps/artisan",
     "lint": "eslint apps/ packages/ --ext .ts,.tsx"
   }
 }
